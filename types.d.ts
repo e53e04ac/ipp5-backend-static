@@ -12,11 +12,11 @@ import { RequestHandler as ExpressRequestHandler } from 'express';
 import { Router as ExpressRouter } from 'express';
 
 import { Get } from 'hold';
-import { Ipp5BackendStaticLauncher } from 'ipp5-backend-static-launcher';
+import { Ipp5BackendStaticEnvMap } from 'ipp5-types';
 
 export declare type Application = {
     readonly process: Get<NodeJS.Process>;
-    readonly env: Get<Ipp5BackendStaticLauncher.EnvMap>;
+    readonly env: Get<Ipp5BackendStaticEnvMap>;
     readonly healthcheckHandler: Get<ExpressRequestHandler<unknown, unknown, unknown, unknown, Record<string, unknown>>>;
     readonly expressStatic: Get<ExpressRequestHandler>;
     readonly expressRouter: Get<ExpressRouter>;
