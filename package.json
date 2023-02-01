@@ -14,8 +14,8 @@
     "url": "https://github.com/e53e04ac/ipp5-backend-static/issues"
   },
   "type": "module",
-  "types": "./types.d.ts",
-  "main": "main.mjs",
+  "types": "index.d.ts",
+  "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

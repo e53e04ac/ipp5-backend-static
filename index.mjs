@@ -1,5 +1,5 @@
 /*!
-    @e53e04ac/ipp5-backend-static/main.mjs
+    @e53e04ac/ipp5-backend-static/index.mjs
     Copyright (C) @e53e04ac
     MIT License
 */
@@ -13,7 +13,7 @@ import { default as Joi } from 'joi';
 
 import { hold } from 'hold';
 
-/** @type {import('./types').Application} */
+/** @type {import('.').Application} */
 const app = ({
     process: hold(() => {
         return process;
