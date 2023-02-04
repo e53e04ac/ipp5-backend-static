@@ -23,10 +23,10 @@
     "@types/express": "^4.17.16",
     "express": "^4.18.2",
     "hold": "github:e53e04ac/hold",
-    "ipp5-types": "github:e53e04ac/ipp5-types",
     "joi": "^17.7.0"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18"
+    "@types/node": "^18.11.18",
+    "ipp5-types": "github:e53e04ac/ipp5-types"
   }
 }
