@@ -4,6 +4,10 @@
 npm install e53e04ac/ipp5-backend-static
 ~~~~~
 
+~~~~~ mjs
+import { type Application } from 'e53e04ac/ipp5-backend-static';
+~~~~~
+
 ~~~~~ mermaid
 graph RL;
   A(["package.json"]);
@@ -25,60 +29,66 @@ graph RL;
   A ----> B_5;
   click B_0 "https://www.npmjs.org/package/@types/express/v/4.17.17";
   click B_1 "https://www.npmjs.org/package/express/v/4.18.2";
-  click B_2 "https://github.com/e53e04ac/hold/tree/285d028e225a7e75747417c3ed6b1ca0d5f52f6a";
+  click B_2 "https://github.com/e53e04ac/hold/tree/8fc3f6696d1c7ed6d184d90c5e33298cc9228991";
   click B_3 "https://www.npmjs.org/package/joi/v/17.7.1";
   click B_4 "https://www.npmjs.org/package/@types/node/v/18.13.0";
-  click B_5 "https://github.com/e53e04ac/ipp5-types/tree/ef144d850d518b40703ea085cb940b3ec452bde2";
+  click B_5 "https://github.com/e53e04ac/ipp5-types/tree/aac76e19ca56887358edd54beb91a81e3807a191";
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.mjs"])
+graph RL;
+  subgraph "e53e04ac/ipp5-backend-static";
+  end;
+  M(["index.mjs"])
   subgraph "node:http";
-    B_0_0(["Server"]);
+    I_0_0(["Server"]);
   end;
   subgraph "express";
-    B_1_0(["default"]);
-    B_1_1(["Router"]);
-    B_1_2(["static"]);
+    I_1_0(["default"]);
+    I_1_1(["Router"]);
+    I_1_2(["static"]);
   end;
   subgraph "joi";
-    B_2_0(["default"]);
+    I_2_0(["default"]);
   end;
   subgraph "hold";
-    B_3_0(["hold"]);
+    I_3_0(["hold"]);
   end;
-  B_0_0 ----> A;
-  B_1_0 ----> A;
-  B_1_1 ----> A;
-  B_1_2 ----> A;
-  B_2_0 ----> A;
-  B_3_0 ----> A;
+  M ----> I_0_0;
+  M ----> I_1_0;
+  M ----> I_1_1;
+  M ----> I_1_2;
+  M ----> I_2_0;
+  M ----> I_3_0;
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.d.ts"])
+graph RL;
+  subgraph "e53e04ac/ipp5-backend-static";
+    E_0(["type Application"]);
+  end;
+  M(["index.d.ts"])
   subgraph "node:http";
-    B_0_0(["Server"]);
+    I_0_0(["Server"]);
   end;
   subgraph "express";
-    B_1_0(["Application"]);
-    B_1_1(["ErrorRequestHandler"]);
-    B_1_2(["RequestHandler"]);
-    B_1_3(["Router"]);
+    I_1_0(["Application"]);
+    I_1_1(["ErrorRequestHandler"]);
+    I_1_2(["RequestHandler"]);
+    I_1_3(["Router"]);
   end;
   subgraph "hold";
-    B_2_0(["Get"]);
+    I_2_0(["Get"]);
   end;
   subgraph "ipp5-types";
-    B_3_0(["Ipp5BackendStaticEnvMap"]);
+    I_3_0(["Ipp5BackendStaticEnvMap"]);
   end;
-  B_0_0 ----> A;
-  B_1_0 ----> A;
-  B_1_1 ----> A;
-  B_1_2 ----> A;
-  B_1_3 ----> A;
-  B_2_0 ----> A;
-  B_3_0 ----> A;
+  M ----> I_0_0;
+  M ----> I_1_0;
+  M ----> I_1_1;
+  M ----> I_1_2;
+  M ----> I_1_3;
+  M ----> I_2_0;
+  M ----> I_3_0;
+  E_0 ----> M;
 ~~~~~
