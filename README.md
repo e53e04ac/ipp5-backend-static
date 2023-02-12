@@ -5,7 +5,6 @@ npm install e53e04ac/ipp5-backend-static
 ~~~~~
 
 ~~~~~ mjs
-import { Application } from 'e53e04ac/ipp5-backend-static';
 ~~~~~
 
 ~~~~~ mermaid
@@ -29,10 +28,10 @@ graph RL;
   A ----> B_5;
   click B_0 "https://www.npmjs.org/package/@types/express/v/4.17.17";
   click B_1 "https://www.npmjs.org/package/express/v/4.18.2";
-  click B_2 "https://github.com/e53e04ac/hold/tree/67e5b60f9bb3221f8b200107c13e89a604a93631";
+  click B_2 "https://github.com/e53e04ac/hold/tree/5dd6f94b8ecd94f98219a7afae52320676380c27";
   click B_3 "https://www.npmjs.org/package/joi/v/17.7.1";
   click B_4 "https://www.npmjs.org/package/@types/node/v/18.13.0";
-  click B_5 "https://github.com/e53e04ac/ipp5-types/tree/6f3ee419d7cf5ae7f689bd79bde869f462fe30aa";
+  click B_5 "https://github.com/e53e04ac/ipp5-types/tree/f0ef220175398bc3bab4a468906a94e8446fc893";
 ~~~~~
 
 ~~~~~ mermaid
@@ -65,7 +64,7 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-backend-static";
-    E_0(["Application"]);
+    E_0(["type Application"]);
   end;
   M(["index.d.ts"])
   subgraph "node:http";
