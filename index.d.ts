@@ -17,6 +17,7 @@ import { Ipp5BackendStaticEnvMap } from 'ipp5-types';
 export declare type Application = {
     readonly process: Get<NodeJS.Process>;
     readonly env: Get<Ipp5BackendStaticEnvMap>;
+    readonly logHandler: Get<ExpressRequestHandler<unknown, unknown, unknown, unknown, Record<string, unknown>>>;
     readonly healthcheckHandler: Get<ExpressRequestHandler<unknown, unknown, unknown, unknown, Record<string, unknown>>>;
     readonly expressStatic: Get<ExpressRequestHandler>;
     readonly expressRouter: Get<ExpressRouter>;

@@ -35,6 +35,35 @@ const app = ({
         }
         return validationResult.value;
     }),
+    logHandler: hold(() => {
+        return ((req, res, next) => {
+            const beginDate = new Date();
+            res.on('close', () => {
+                const endDate = new Date();
+                const duration = endDate.getTime() - beginDate.getTime();
+                const record = {
+                    beginDate,
+                    endDate,
+                    duration,
+                    remoteFamily: req.socket.remoteFamily ?? null,
+                    remoteAddress: req.socket.remoteAddress ?? null,
+                    remotePort: req.socket.remotePort ?? null,
+                    localFamily: req.socket.localFamily ?? null,
+                    localAddress: req.socket.localAddress ?? null,
+                    localPort: req.socket.localPort ?? null,
+                    method: req.method,
+                    url: req.url,
+                    httpVersion: req.httpVersion,
+                    requestHeaders: req.headers,
+                    status: res.statusCode,
+                    statusMessage: res.statusMessage,
+                    responseHeaders: res.getHeaders(),
+                };
+                console.log(JSON.stringify(record));
+            });
+            next();
+        });
+    }),
     healthcheckHandler: hold(() => {
         return ((req, res, next) => {
             res.status(200).type('text/plain; charset=utf-8').end('200 OK');
@@ -92,6 +121,7 @@ const app = ({
         it.set('view cache', null);
         it.set('view engine', null);
         it.set('x-powered-by', false);
+        it.use(app.logHandler());
         it.use(app.env().CUSTOM_BACKEND_STATIC_HTTP_PATH_PREFIX, app.expressRouter());
         it.use(app.expressNotFound());
         it.use(app.expressInternalServerError());
