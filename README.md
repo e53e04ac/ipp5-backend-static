@@ -18,14 +18,14 @@ graph RL;
     B_5(["ipp5-types"]);
   end;
   subgraph "github";
-    C_2(["e53e04ac/hold\nccd6d335b2be61f30045be782b2129d08a53ac67"]);
-    C_5(["e53e04ac/ipp5-types\nebe99d725f05ad1eabec2b37a2c5737becc56480"]);
+    C_2(["e53e04ac/hold\n511bb6663491dadc6e2760a04ee3750996d069f8"]);
+    C_5(["e53e04ac/ipp5-types\n6681f338b68a6fc829acd9b531e7d312010efde9"]);
   end;
   subgraph "npmjs";
     C_0(["@types/express\n4.17.17"]);
     C_1(["express\n4.18.2"]);
     C_3(["joi\n17.8.3"]);
-    C_4(["@types/node\n18.14.1"]);
+    C_4(["@types/node\n18.14.2"]);
   end;
   A ----> B_0;
   A ----> B_1;
@@ -41,10 +41,10 @@ graph RL;
   B_5 ----> C_5;
   click C_0 "https://www.npmjs.com/package/@types/express/v/4.17.17";
   click C_1 "https://www.npmjs.com/package/express/v/4.18.2";
-  click C_2 "https://github.com/e53e04ac/hold/tree/ccd6d335b2be61f30045be782b2129d08a53ac67";
+  click C_2 "https://github.com/e53e04ac/hold/tree/511bb6663491dadc6e2760a04ee3750996d069f8";
   click C_3 "https://www.npmjs.com/package/joi/v/17.8.3";
-  click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
-  click C_5 "https://github.com/e53e04ac/ipp5-types/tree/ebe99d725f05ad1eabec2b37a2c5737becc56480";
+  click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.2";
+  click C_5 "https://github.com/e53e04ac/ipp5-types/tree/6681f338b68a6fc829acd9b531e7d312010efde9";
 ~~~~~
 
 ~~~~~ mermaid
